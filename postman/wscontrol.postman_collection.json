@@ -1,0 +1,121 @@
+{
+	"variables": [],
+	"info": {
+		"name": "wscontrol",
+		"_postman_id": "c859e1c2-1106-9b83-2c8c-e5ebda7e1183",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"url": "http://localhost:8000/api/v1/auth/login",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@mail.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "Realizar login na aplicação:\n\nO token resultado deve ser colocado no GET &token= ou no Header"
+			},
+			"response": []
+		},
+		{
+			"name": "PersonInfo - getAll",
+			"request": {
+				"url": "http://localhost:8000/api/v1/personInfo/",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Retornas os últimos 10 log realizados"
+			},
+			"response": []
+		},
+		{
+			"name": "PersonInfo - Save",
+			"request": {
+				"url": "http://localhost:8000/api/v1/personInfo/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvdjEvYXV0aC9sb2dpbiIsImlhdCI6MTU1MDgwMjE2NywiZXhwIjoxNTUwODA1NzY3LCJuYmYiOjE1NTA4MDIxNjcsImp0aSI6IjZ6WnNYV0FoZGRVT2RkT0kifQ.SPXzh7IUsAzpBGAFzKwxx2xW6lU-w99D09iVHB-aqLs",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Teste",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "birthday",
+							"value": "15/08/1991",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "sex",
+							"value": "M",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "Consulta de informações da pessoa (idade e signo)"
+			},
+			"response": []
+		},
+		{
+			"name": "FibonacciSeries",
+			"request": {
+				"url": "http://localhost:8000/api/v1/fibonacciSeries",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hcGkvdjEvYXV0aC9sb2dpbiIsImlhdCI6MTU1MDgwMjE2NywiZXhwIjoxNTUwODA1NzY3LCJuYmYiOjE1NTA4MDIxNjcsImp0aSI6IjZ6WnNYV0FoZGRVT2RkT0kifQ.SPXzh7IUsAzpBGAFzKwxx2xW6lU-w99D09iVHB-aqLs",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "initial",
+							"value": "0",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "size",
+							"value": "5",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "Retorna a lista de valores da sequência de Fibonacci para um valor inicial e tamanho repassado"
+			},
+			"response": []
+		}
+	]
+}
